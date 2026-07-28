@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARALLY - Official Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>FREE SHIPPING ON ORDERS OVER $150 | NEW DROP EVERY FRIDAY</p>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="logo">
+                <a href="/">VARALLY</a>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">NEW ARRIVALS</a>
+                        <div class="dropdown">
+                            <a href="#">Latest Drops</a>
+                            <a href="#">This Week</a>
+                            <a href="#">Coming Soon</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">MEN</a>
+                        <div class="dropdown">
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Jackets</a>
+                            <a href="#">Bottoms</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">WOMEN</a>
+                        <div class="dropdown">
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Jackets</a>
+                            <a href="#">Bottoms</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">COLLECTIONS</a>
+                        <div class="dropdown">
+                            <a href="#">Camo Series</a>
+                            <a href="#">Reflective Line</a>
+                            <a href="#">Collaboration</a>
+                            <a href="#">Archive</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">FOOTWEAR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ACCESSORIES</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn search-btn" id="searchBtn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="action-btn account-btn" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                <button class="action-btn cart-btn" id="cartBtn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+            <button class="search-close" id="searchClose">&times;</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);">
+                <div class="hero-content">
+                    <span class="hero-tag">SS26 COLLECTION</span>
+                    <h1 class="hero-title">VARALLY<br>CAMO SERIES</h1>
+                    <p class="hero-subtitle">Streetwear redefined. Limited edition drops.</p>
+                    <a href="#" class="hero-btn">SHOP NOW</a>
+                </div>
+                <div class="hero-graphic">
+                    <div class="camo-pattern"></div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);">
+                <div class="hero-content">
+                    <span class="hero-tag">EXCLUSIVE DROP</span>
+                    <h1 class="hero-title">REFLECTIVE<br>COLLECTION</h1>
+                    <p class="hero-subtitle">Glow in the dark. Stand out at night.</p>
+                    <a href="#" class="hero-btn">EXPLORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+        </div>
+    </section>
+
+    <!-- Category Banners -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(45deg, #2d2d2d, #1a1a1a);">
+                        <span class="category-icon">&#9733;</span>
+                    </div>
+                    <h3>NEW ARRIVALS</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(45deg, #1a2332, #0d1117);">
+                        <span class="category-icon">&#9830;</span>
+                    </div>
+                    <h3>MEN</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(45deg, #2d1a2d, #1a0d1a);">
+                        <span class="category-icon">&#9827;</span>
+                    </div>
+                    <h3>WOMEN</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(45deg, #1a2d1a, #0d1a0d);">
+                        <span class="category-icon">&#9824;</span>
+                    </div>
+                    <h3>ACCESSORIES</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+                <a href="#" class="view-all">View All &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Camo Shark Hoodie" data-price="289">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #2a4a2a, #1a3a1a);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <span class="product-badge">NEW</span>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camo Shark Hoodie</h3>
+                        <p class="product-price">$289.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Reflective Logo Tee" data-price="129">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Reflective Logo Tee</h3>
+                        <p class="product-price">$129.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Varsity Bomber Jacket" data-price="459">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <span class="product-badge sold-out">SOLD OUT</span>
+                        <button class="quick-add" disabled aria-label="Sold out">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Varsity Bomber Jacket</h3>
+                        <p class="product-price">$459.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-id="4" data-name="Logo Camo Sweatpants" data-price="199">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #3a2a1a, #2a1a0a);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <span class="product-badge">LIMITED</span>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Logo Camo Sweatpants</h3>
+                        <p class="product-price">$199.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-id="5" data-name="Varally Star Sneakers" data-price="349">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #1a1a1a, #333333);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <span class="product-badge">NEW</span>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Varally Star Sneakers</h3>
+                        <p class="product-price">$349.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-id="6" data-name="Shark Full Zip Jacket" data-price="399">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #2e1a2e, #1e0a1e);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Shark Full Zip Jacket</h3>
+                        <p class="product-price">$399.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-id="7" data-name="Camo Bucket Hat" data-price="89">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #2a3a2a, #1a2a1a);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camo Bucket Hat</h3>
+                        <p class="product-price">$89.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-id="8" data-name="Varally Logo Crossbody" data-price="159">
+                    <div class="product-image">
+                        <div class="product-placeholder" style="background: linear-gradient(135deg, #1a2a3a, #0a1a2a);">
+                            <span class="placeholder-text">V</span>
+                        </div>
+                        <span class="product-badge">NEW</span>
+                        <button class="quick-add" aria-label="Add to cart">+</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Varally Logo Crossbody</h3>
+                        <p class="product-price">$159.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lookbook / Collection Banner -->
+    <section class="lookbook">
+        <div class="lookbook-grid">
+            <div class="lookbook-item large">
+                <div class="lookbook-bg" style="background: linear-gradient(135deg, #0d1117 0%, #1a2332 50%, #0d1117 100%);">
+                    <div class="lookbook-content">
+                        <span class="lookbook-tag">LOOKBOOK</span>
+                        <h2>SS26<br>COLLECTION</h2>
+                        <a href="#" class="lookbook-btn">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <div class="lookbook-bg" style="background: linear-gradient(135deg, #1a0d1a 0%, #2d1a2d 100%);">
+                    <div class="lookbook-content">
+                        <span class="lookbook-tag">COLLAB</span>
+                        <h2>VARALLY x STORM</h2>
+                        <a href="#" class="lookbook-btn">SHOP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <div class="lookbook-bg" style="background: linear-gradient(135deg, #1a2d1a 0%, #0d1a0d 100%);">
+                    <div class="lookbook-content">
+                        <span class="lookbook-tag">EXCLUSIVE</span>
+                        <h2>CAMO PACK</h2>
+                        <a href="#" class="lookbook-btn">SHOP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram / Social Feed -->
+    <section class="social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">@VARALLY</h2>
+                <a href="#" class="view-all">Follow Us &rarr;</a>
+            </div>
+            <div class="social-grid">
+                <div class="social-item" style="background: linear-gradient(45deg, #2a2a2a, #1a1a1a);"></div>
+                <div class="social-item" style="background: linear-gradient(45deg, #1a2a1a, #0d1a0d);"></div>
+                <div class="social-item" style="background: linear-gradient(45deg, #2a1a2a, #1a0d1a);"></div>
+                <div class="social-item" style="background: linear-gradient(45deg, #1a1a2a, #0d0d1a);"></div>
+                <div class="social-item" style="background: linear-gradient(45deg, #2a2a1a, #1a1a0d);"></div>
+                <div class="social-item" style="background: linear-gradient(45deg, #1a2a2a, #0d1a1a);"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>JOIN THE VARALLY FAMILY</h2>
+                <p>Be the first to know about new drops, exclusive offers, and limited releases.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">VARALLY</h3>
+                    <p class="footer-desc">Premium streetwear brand. Established 2024. Limited edition drops every Friday.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Footwear</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Stores</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VARALLY. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>YOUR CART</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <p>Your cart is empty</p>
+                <a href="#" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <p class="cart-note">Shipping calculated at checkout</p>
+            <button class="checkout-btn">CHECKOUT</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
