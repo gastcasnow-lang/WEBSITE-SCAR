@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VARALLY - Official Store</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Preload first 3 product images for faster rendering -->
+    <link rel="preload" as="image" href="assets/images/1.png">
+    <link rel="preload" as="image" href="assets/images/2.png">
+    <link rel="preload" as="image" href="assets/images/3.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -181,7 +185,7 @@
                 <!-- Product 1 -->
                 <div class="product-card" data-id="1" data-name="Camo Shark Hoodie" data-price="289">
                     <div class="product-image">
-                        <img src="assets/images/1.png" alt="Camo Shark Hoodie">
+                        <img src="assets/images/1.png" alt="Camo Shark Hoodie" width="600" height="600" loading="eager" decoding="async">
                         <span class="product-badge">NEW</span>
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
@@ -194,7 +198,7 @@
                 <!-- Product 2 -->
                 <div class="product-card" data-id="2" data-name="Reflective Logo Tee" data-price="129">
                     <div class="product-image">
-                        <img src="assets/images/2.png" alt="Reflective Logo Tee">
+                        <img src="assets/images/2.png" alt="Reflective Logo Tee" width="600" height="600" loading="eager" decoding="async">
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
                     <div class="product-info">
@@ -206,7 +210,7 @@
                 <!-- Product 3 -->
                 <div class="product-card" data-id="3" data-name="Varsity Bomber Jacket" data-price="459">
                     <div class="product-image">
-                        <img src="assets/images/3.png" alt="Varsity Bomber Jacket">
+                        <img src="assets/images/3.png" alt="Varsity Bomber Jacket" width="600" height="600" loading="eager" decoding="async">
                         <span class="product-badge sold-out">SOLD OUT</span>
                         <button class="quick-add" disabled aria-label="Sold out">+</button>
                     </div>
@@ -219,7 +223,7 @@
                 <!-- Product 4 -->
                 <div class="product-card" data-id="4" data-name="Logo Camo Sweatpants" data-price="199">
                     <div class="product-image">
-                        <img src="assets/images/4.png" alt="Logo Camo Sweatpants">
+                        <img src="assets/images/4.png" alt="Logo Camo Sweatpants" width="600" height="600" loading="lazy" decoding="async">
                         <span class="product-badge">LIMITED</span>
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
@@ -232,7 +236,7 @@
                 <!-- Product 5 -->
                 <div class="product-card" data-id="5" data-name="Varally Star Sneakers" data-price="349">
                     <div class="product-image">
-                        <img src="assets/images/5.png" alt="Varally Star Sneakers">
+                        <img src="assets/images/5.png" alt="Varally Star Sneakers" width="600" height="600" loading="lazy" decoding="async">
                         <span class="product-badge">NEW</span>
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
@@ -245,7 +249,7 @@
                 <!-- Product 6 -->
                 <div class="product-card" data-id="6" data-name="Shark Full Zip Jacket" data-price="399">
                     <div class="product-image">
-                        <img src="assets/images/6.png" alt="Shark Full Zip Jacket">
+                        <img src="assets/images/6.png" alt="Shark Full Zip Jacket" width="600" height="600" loading="lazy" decoding="async">
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
                     <div class="product-info">
@@ -257,7 +261,7 @@
                 <!-- Product 7 -->
                 <div class="product-card" data-id="7" data-name="Camo Bucket Hat" data-price="89">
                     <div class="product-image">
-                        <img src="assets/images/7.png" alt="Camo Bucket Hat">
+                        <img src="assets/images/7.png" alt="Camo Bucket Hat" width="600" height="600" loading="lazy" decoding="async">
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
                     <div class="product-info">
@@ -269,7 +273,7 @@
                 <!-- Product 8 -->
                 <div class="product-card" data-id="8" data-name="Varally Logo Crossbody" data-price="159">
                     <div class="product-image">
-                        <img src="assets/images/8.png" alt="Varally Logo Crossbody">
+                        <img src="assets/images/8.png" alt="Varally Logo Crossbody" width="600" height="600" loading="lazy" decoding="async">
                         <span class="product-badge">NEW</span>
                         <button class="quick-add" aria-label="Add to cart">+</button>
                     </div>
@@ -427,6 +431,19 @@
         </div>
     </div>
 
+    <!-- Performance: Hide shimmer once image loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.product-image img').forEach(function(img) {
+                if (img.complete) {
+                    img.parentElement.classList.add('loaded');
+                }
+                img.addEventListener('load', function() {
+                    this.parentElement.classList.add('loaded');
+                });
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
